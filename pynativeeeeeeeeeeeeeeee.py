@@ -161,6 +161,77 @@ print(calc_tax(9000))
 print(calc_tax(20000))
 print(calc_tax(18000))
 print(calc_tax(65000))
-'''
+
 ##################################
 #Exercise 13: Print multiplication table form 1 to 10
+
+def multiplication_table():
+    for i in range (1, 11):
+        for j in range(1, 11):
+            print(i * j, end=' ')
+        print('\n')
+        
+multiplication_table()
+
+################################
+#Exercise 14: Print downward Half-Pyramid Pattern with Star (asterisk)
+#range(5, 0, -1) generates a sequence of numbers starting from 6 down to 1 (inclusive) with a step of -1, which means it's counting backwards.
+def print_half_pyramid_star():
+    for i in range(5, 0, -1):
+        for j in range(0, i):
+            print('*', end=' ')
+        print('\n')
+print_half_pyramid_star()
+
+######################################
+#Exercise 15: Write a function called exponent(base, exp) that returns an int value of base raises to the power of exp.
+def calc_exponent(num, power):
+    product = 1
+    for i in range(0, power):
+        product *= num
+    return product
+print(calc_exponent(2, 10))
+
+##############################################
+#Python Input and Output Exercise
+#Exercise 1: Accept numbers from a user
+num1 = input('enter first number:')
+num2 = input('enter second number:')
+product = int(num1) * int(num2)
+
+###################################
+#Exercise 2: Display three string “Name”, “Is”, “James” as “Name**Is**James”
+str1 = 'Name'
+str2 = 'Is'
+str3 = 'James'
+new_str = str1 + '**' + str2 + '**' + str3
+print(new_str)
+print('My', 'Name', 'Is', 'James', sep='**')
+
+###################################
+#Exercise 3: Convert Decimal number to octal using print() output formatting
+num = 90
+print('%o' % num)
+
+###################################
+#Exercise 4: Display float number with 2 decimal places using print()
+a = 0.999
+print('%.2f' %a)
+
+###################################
+#Exercise 5: Accept a list of 5 float numbers as an input from the user
+new_list = []
+for i in range(0,5):
+    new_list.append(float(input('enter a float number:')))
+    
+print(new_list)
+
+###################################
+#Exercise 6: Write all content of a given file into a new file by skipping line number 5
+#Use range() to generate a sequence of numbers starting from 9 to 100 divisible by 3.
+for i in range(9, 100, 3):
+    print(i, end=' ')
+'''  
+    
+for char in range ('a','z'):
+    print(char)
